@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "powerbi": {
+      "command": "python",
+      "args": ["C:\\path\\to\\powerbi-mcp\\server.py"],
+      "env": {
+        "POWERBI_TENANT_ID": "your-tenant-id-or-domain"
+      }
+    }
+  }
+}

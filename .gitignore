@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets and token caches - NEVER commit these
+.env
+*.bin
+token_cache*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/

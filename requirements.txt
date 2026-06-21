@@ -1,0 +1,3 @@
+fastmcp>=2.0
+msal[broker]>=1.28
+requests>=2.31
