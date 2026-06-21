@@ -27,7 +27,7 @@ No tokens are ever pasted by hand or stored in config.
 ## Setup
 
 ```bash
-git clone https://github.com/<your-username>/powerbi-mcp.git
+git clone https://github.com/rajivdatta/powerbi-mcp.git
 cd powerbi-mcp
 python -m venv .venv
 .venv\Scripts\activate          # Windows
