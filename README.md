@@ -97,6 +97,36 @@ Use the venv's Python so dependencies resolve:
 
 Restart your MCP client, then try: *"using powerbi, list my workspaces"*.
 
+### Use with Claude Desktop
+
+[Claude Desktop](https://claude.ai/download) reads its MCP servers from
+`claude_desktop_config.json`. Open it from **Settings → Developer → Edit Config**
+(this creates the file if it doesn't exist), or edit it directly:
+
+- **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+- **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+
+Add this server under `mcpServers`, using **absolute paths** to the venv's
+Python and `server.py`:
+
+```json
+{
+  "mcpServers": {
+    "powerbi": {
+      "command": "C:\\path\\to\\powerbi-mcp\\.venv\\Scripts\\python.exe",
+      "args": ["C:\\path\\to\\powerbi-mcp\\server.py"],
+      "env": { "POWERBI_TENANT_ID": "your-tenant-id-or-domain" }
+    }
+  }
+}
+```
+
+On macOS the paths are POSIX, e.g. `"command": "/Users/you/powerbi-mcp/.venv/bin/python"`.
+Save the file and **fully quit and reopen Claude Desktop** (use *Quit* from the
+tray/menu-bar icon — closing the window isn't enough). The server's tools then
+appear in the tools (🔌) menu of a new chat. Sign in first with
+`python server.py --login` so the token cache exists before Desktop launches it.
+
 ## Usage flow
 
 A typical sequence:
