@@ -1,5 +1,7 @@
 # powerbi-mcp
 
+[![CI](https://github.com/rajivdatta/powerbi-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/rajivdatta/powerbi-mcp/actions/workflows/ci.yml)
+
 A small [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server for
 **Microsoft Power BI**. It lets an MCP-capable client (Claude, VS Code, etc.)
 discover your workspaces and datasets, read a semantic model's structure, and run
